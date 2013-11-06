@@ -1,0 +1,6 @@
+#feed.container ng-controller="InstasearchFeedListCtrl"
+  .h1 Here are the last 20 pictures from your feed.
+  .row
+    .col-md-3 ng-repeat="item in items"
+      img src="{{item.images.low_resolution.url}}"
+

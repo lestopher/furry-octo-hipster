@@ -1,0 +1,12 @@
+doctype 5
+html(ng-app='instasearchApp')
+  head
+    title Instasearch!
+    link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css"
+    script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+    script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"
+    script type="text/javascript" src="/js/controllers.js"
+
+  body
+    == yield
+    script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"

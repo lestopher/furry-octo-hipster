@@ -11,6 +11,9 @@ gem 'activerecord-postgresql-adapter'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'instagram'
 gem 'json'
+gem 'sinatra-assetpack', :require => 'sinatra/assetpack'
+gem 'therubyracer'
+gem 'less'
 
 if RUBY_VERSION =~ /1.8/
   gem 'backports', '2.3.0'

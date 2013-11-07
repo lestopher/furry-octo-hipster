@@ -1,16 +1,35 @@
 require 'sinatra'
 require 'sinatra/namespace'
+require 'sinatra/assetpack'
 # require 'sinatra/json'
 require 'slim'
 require 'pry' if ENV['RACK_ENV'] != 'production'
 require 'bcrypt'
 require 'instagram'
 require 'json'
-
+require 'less'
 
 class Instasearch < Sinatra::Application
   register Sinatra::Namespace
-  # helpers Sinatra::JSON
+  register Sinatra::AssetPack
+
+  assets {
+    serve '/js',      from: 'public/js'
+    serve '/css',     from: 'public/css'
+    # serve '/images',  from: 'public/images'
+
+    js :app, 'public/js/app.js', [
+      '/js/lib/**/*.js'
+    ]
+
+    css :application, 'public/css/application.css', [
+      '/css/*'
+    ]
+
+    js_compression    :jsmin
+    css_compression   :less
+  }
+
   enable :logging if ENV['RACK_ENV'] != 'production'
 
   use Rack::Session::Cookie, :key => 'rack.session',

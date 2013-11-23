@@ -46,7 +46,7 @@ class Instasearch < Sinatra::Application
 
   get '/' do
     if session[:access_token]
-      slim :feed
+      slim :feed, :locals => { ngController: 'FeedListController' }
     else
       slim :index 
     end

@@ -37,16 +37,8 @@ GEM
     backports (3.3.5)
     bcrypt-ruby (3.1.2)
     builder (3.0.4)
-    coderay (1.0.9)
-    columnize (0.3.6)
     commonjs (0.2.7)
     daemons (1.1.9)
-    debugger (1.6.2)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.2.3)
-    debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.2.3)
     dotenv (0.9.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -71,17 +63,9 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
-    method_source (0.8.2)
     multi_json (1.8.2)
     multipart-post (1.2.0)
     pg (0.17.0)
-    pry (0.9.12.2)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
-    pry-debugger (0.2.2)
-      debugger (~> 1.3)
-      pry (~> 0.9.10)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -128,7 +112,6 @@ GEM
     slim (2.0.2)
       temple (~> 0.6.6)
       tilt (>= 1.3.3, < 2.1)
-    slop (3.4.6)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -162,7 +145,6 @@ DEPENDENCIES
   instagram!
   json
   less
-  pry-debugger
   rack
   rake
   rerun

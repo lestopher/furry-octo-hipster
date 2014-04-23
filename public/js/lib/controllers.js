@@ -1,4 +1,5 @@
-var instasearchApp = angular.module('instasearchApp', ['google-maps', 'tag-services', 'feed-services']);
+var instasearchApp = angular.module('instasearchApp',
+  ['google-maps', 'tag-services', 'feed-services']);
 
 instasearchApp.controller('TagListController', ['$scope', 'Tag',
   function TagListCtrl($scope, Tag) {
@@ -24,7 +25,7 @@ instasearchApp.controller('TagListController', ['$scope', 'Tag',
         $scope.items.range = function() {
           var range = [];
           for(var i=0; i < $scope.items.length; i+=4) {
-            range.push(i); 
+            range.push(i);
           }
           return range;
         }
@@ -39,8 +40,8 @@ instasearchApp.controller('TagListController', ['$scope', 'Tag',
   }
 ]);
 
-instasearchApp.controller('InstasearchFeedListController', ['$scope', 'Feed',
-  function InstasearchFeedListCtrl($scope, Feed) {
+instasearchApp.controller('FeedListController', ['$scope', 'Feed',
+  function FeedListCtrl($scope, Feed) {
     $scope.header_text = "My Feed.";
 
     $scope.init = function() {
@@ -62,7 +63,7 @@ instasearchApp.controller('InstasearchFeedListController', ['$scope', 'Feed',
         $scope.items.range = function() {
           var range = [];
           for(var i=0; i < $scope.items.length; i+=4) {
-            range.push(i); 
+            range.push(i);
           }
           return range;
         }

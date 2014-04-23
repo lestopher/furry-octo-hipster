@@ -1,6 +1,7 @@
 #feed.container ng-controller="#{ngController}" ng-init="init()"
   .h1
     | {{header_text}}
+  form
   .row.pic-row ng-repeat="i in items.range()"
     .col-md-3 ng-repeat="item in items.slice(i, i+4)"
       img src="{{item.images.low_resolution.url}}"

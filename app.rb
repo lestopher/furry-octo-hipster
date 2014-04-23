@@ -3,7 +3,6 @@ require 'sinatra/namespace'
 require 'sinatra/assetpack'
 # require 'sinatra/json'
 require 'slim'
-require 'pry' if ENV['RACK_ENV'] != 'production'
 require 'bcrypt'
 require 'instagram'
 require 'json'
@@ -48,7 +47,7 @@ class Instasearch < Sinatra::Application
     if session[:access_token]
       slim :feed, :locals => { ngController: 'FeedListController' }
     else
-      slim :index 
+      slim :index
     end
   end
 end
